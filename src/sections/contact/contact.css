@@ -1,0 +1,104 @@
+.contact_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact_options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact_option {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.contact_option:hover {
+  transform: translateY(-5px);
+}
+
+.contact_icon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+}
+
+.contact_option h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-dark);
+}
+
+.contact_option a {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact_option a:hover {
+  text-decoration: underline;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: var(--border-radius-3);
+  border: 1px solid var(--color-light);
+  background: var(--color-white);
+  font-size: 0.95rem;
+  resize: none;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.contact_form .btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact_form .btn:hover {
+  background: var(--color-dark);
+}
+
+@media screen and (max-width: 768px) {
+  .contact_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
