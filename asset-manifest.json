@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/kyran-portfolio/static/css/main.729489dd.css",
+    "main.js": "/kyran-portfolio/static/js/main.4afa39e6.js",
+    "static/media/LCSG.png": "/kyran-portfolio/static/media/LCSG.c274d9191d7866731843.png",
+    "static/media/FCMS.jpg": "/kyran-portfolio/static/media/FCMS.f16176fea97302476903.jpg",
+    "static/media/FixIT.jpg": "/kyran-portfolio/static/media/FixIT.2ba75b66e0987002ad5f.jpg",
+    "static/media/picture.jpg": "/kyran-portfolio/static/media/picture.4e2744193976ec83f02c.jpg",
+    "static/media/Logo.png": "/kyran-portfolio/static/media/Logo.1272b13e87627dd1145d.png",
+    "index.html": "/kyran-portfolio/index.html",
+    "main.729489dd.css.map": "/kyran-portfolio/static/css/main.729489dd.css.map",
+    "main.4afa39e6.js.map": "/kyran-portfolio/static/js/main.4afa39e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.729489dd.css",
+    "static/js/main.4afa39e6.js"
+  ]
+}
