@@ -25,11 +25,11 @@ const About = () => {
             ))
             }
           </div>
-          <p>I’m Kyran Gabriel E. Josafat from Bocacliw, Aguilar, Pangasinan.
-            I’m currently a 3rd-year Information Technology student at PHINMA-University of Pangasinan.
-            I have a growing interest in front-end development and UI design,
-            and I aim to create simple and useful systems that can help make everyday tasks easier.
-            I’m always eager to learn new technologies and improve my skills through practice and collaboration with others.</p>
+          <p>I’m Kyran Gabriel E. Josafat from Bocacliw, Aguilar, Pangasinan. 
+            I’m currently a third-year Information Technology student at PHINMA–University of Pangasinan. 
+            I have a growing interest in front-end development and UI design, 
+            and I aim to apply my developing skills to solve real-world problems. 
+            I’m always eager to learn new technologies and continuously improve through practice and collaboration.</p>
         </div>
       </div>
     </section>
