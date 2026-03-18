@@ -7,13 +7,20 @@ const About = () => {
   return (
     <section id="about">
       <div className="container about_container">
-        <div className="about_left">
+        <div className="about_left fade-up">
           <div className="about_portrait">
             <img src={Picture} alt="About Portrait"/>
           </div>
         </div>
-        <div className="about_right">
+        <div className="about_right fade-up">
           <h2>About Me</h2>
+          <p>
+            I’m Kyran Gabriel E. Josafat from Bocacliw, Aguilar, Pangasinan. 
+            I’m currently a third-year Information Technology student at PHINMA–University of Pangasinan. 
+            I have a growing interest in mobile development and UI/UX design, 
+            and I aim to apply my developing skills to solve real-world problems. 
+            I’m always eager to learn new technologies and continuously improve through practice and collaboration.
+          </p>
           <div className="about_cards">
             {
               data.map(item => (
@@ -25,11 +32,6 @@ const About = () => {
             ))
             }
           </div>
-          <p>I’m Kyran Gabriel E. Josafat from Bocacliw, Aguilar, Pangasinan. 
-            I’m currently a third-year Information Technology student at PHINMA–University of Pangasinan. 
-            I have a growing interest in front-end development and UI design, 
-            and I aim to apply my developing skills to solve real-world problems. 
-            I’m always eager to learn new technologies and continuously improve through practice and collaboration.</p>
         </div>
       </div>
     </section>

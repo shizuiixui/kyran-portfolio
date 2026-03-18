@@ -1,3 +1,20 @@
+.contact_header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact_header h2 {
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.contact_header p {
+  max-width: 40rem;
+  margin: 0 auto;
+  color: #666;
+  line-height: 1.6;
+}
+
 .contact_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -12,12 +29,12 @@
 }
 
 .contact_option {
-  background: var(--color-white);
+  background: #ffffff;
   padding: 1.5rem;
-  border-radius: var(--border-radius-3);
+  border-radius: 0.8rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: var(--transition);
+  transition: transform 0.3s ease;
 }
 
 .contact_option:hover {
@@ -26,20 +43,20 @@
 
 .contact_icon {
   font-size: 1.8rem;
-  color: var(--color-primary);
+  color: #6a4c93;
   margin-bottom: 0.8rem;
 }
 
 .contact_option h4 {
   margin-bottom: 0.5rem;
-  color: var(--color-dark);
+  color: #1a1a2e;
 }
 
 .contact_option a {
-  color: var(--color-primary);
+  color: #6a4c93;
   font-weight: 500;
   text-decoration: none;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .contact_option a:hover {
@@ -56,29 +73,42 @@
 .contact_form textarea {
   width: 100%;
   padding: 0.9rem 1rem;
-  border-radius: var(--border-radius-3);
-  border: 1px solid var(--color-light);
-  background: var(--color-white);
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  background: #f8f9fa;
   font-size: 0.95rem;
   resize: none;
+  font-family: inherit;
 }
 
 .contact_form input:focus,
 .contact_form textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: #6a4c93;
 }
 
-.contact_form .btn {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border: none;
+/* Button Styles*/
+.contact_form .contact_btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 100%; 
+  text-align: center;
+  font-family: inherit;
+  font-size: 1rem;
   cursor: pointer;
-  transition: var(--transition);
+  background: #6a4c93;
+  color: #ffffff;
+  border: 2px solid #6a4c93;
 }
 
-.contact_form .btn:hover {
-  background: var(--color-dark);
+.contact_form .contact_btn:hover {
+  background: transparent;
+  color: #6a4c93;
 }
 
 @media screen and (max-width: 768px) {
@@ -87,6 +117,7 @@
     gap: 2rem;
   }
 }
+
 @keyframes fadeUp {
   from {
     opacity: 0;

@@ -6,8 +6,10 @@ const Navbar = () => {
   return (
     <nav id="navbar"> 
       <div className="container nav_container">
+        
         <a href="index.html" className="nav_logo">
           <img src={Logo} alt="Logo" />
+          <span className="logo_text">Kyran</span>
         </a>
         
         <ul className="nav_menu">
@@ -17,6 +19,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <div className="nav_cta">
+          <a href="#contact" className="btn nav_btn">Contact Me</a>
+        </div>
+
       </div>
     </nav>
   );

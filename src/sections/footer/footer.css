@@ -1,6 +1,6 @@
 footer {
-  background: var(--color-primary);
-  color: var(--color-white);
+  background: #6a4c93;
+  color: #ffffff;
   text-align: center;
   padding: 2rem 0;
   margin-top: 4rem;
@@ -24,14 +24,15 @@ footer {
 }
 
 .footer_links a {
-  color: var(--color-white);
+  color: #ffffff;
   font-weight: 500;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .footer_links a:hover {
-  color: var(--color-light);
-  text-decoration: underline;
+  background: transparent;
+  color: #1a1a2e; 
 }
 
 .footer_socials {
@@ -41,13 +42,14 @@ footer {
 }
 
 .footer_socials a {
-  color: var(--color-white);
+  color: #ffffff;
   font-weight: 500;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .footer_socials a:hover {
-  color: var(--color-light);
+  background: transparent;
+  color: #1a1a2e; 
 }
 
 footer p {

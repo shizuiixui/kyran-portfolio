@@ -1,12 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    list-style: none;
-    text-decoration: none;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
 
 :root {
@@ -22,50 +21,43 @@
   --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
   --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
 
-  /* GENERAL CONTAINER VARIABLES */
   --container-width-lg: 76%;
   --container-width-md: 90%;
 
-  /* BORDER RADIUS VARIABLES */
   --border-radius-1: 1.2rem;
   --border-radius-2: 0.8rem;
   --border-radius-3: 0.5rem;
 
-  /* GENERAL TRANSITION VARIABLE */
   --transition: all 500ms ease;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   font-size: 0.9rem;
+  background-color: #ffffff;
+  background-image: radial-gradient(#e2e2e2 1px, transparent 1px);
+  background-size: 24px 24px; 
 }
 
-/* GENERAL CONTAINER CLASS */
 .container {
   width: var(--container-width-lg);
   margin-inline: auto;
   max-width: 1920px;
 }
 
-/* GENERAL SECTION STYLES */
 section {
   padding: 10rem 0;
-  background: var(--color-light);
+  background: transparent;
   transition: var(--transition);
-}
-
-section:nth-child(even) {
-  background: var(--color-white);
 }
 
 section > h2 {
   text-align: center;
-
 }
 
 section > p {
@@ -74,13 +66,11 @@ section > p {
   width: 40%;
 }
 
-/* GENERAL SECTION STYLES */
 a {
   color: var(--color-white);
   transition: var(--transition);
 }
 
-/* GENERAL HEADING STYLES */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   color: var(--color-black);
@@ -111,14 +101,12 @@ h6 {
   font-size: 0.8rem;
 }
 
-/* GENERAL IMAGES STYLES */
 .img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
 
-/* GENERAL BUTTON STYLES */
 .btn {
   display: inline-block;
   width: fit-content;
@@ -163,7 +151,6 @@ h6 {
   padding: 0.5rem 1.5rem;
 }
 
-/* MEDIA QUERIES (tablets) */
 @media screen and (max-width: 1024px) {
   body {
     font-size: 1rem;
@@ -187,7 +174,6 @@ h6 {
   }
 }
 
-/* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 2.4rem;
@@ -221,4 +207,3 @@ h6 {
     width: var(--container-width-md);
   }
 }
-

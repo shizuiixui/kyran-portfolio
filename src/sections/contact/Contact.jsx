@@ -4,14 +4,15 @@ import "./contact.css";
 const Contact = () => {
   return (
     <section id="contact">
-      <h2>Contact Me</h2>
-      <p>
-        I’m always open to new opportunities, collaborations, or just a friendly chat.
-        Feel free to reach out through any of the channels below.
-      </p>
+      <div className="contact_header fade-up">
+        <h2>Contact Me</h2>
+        <p>
+          I’m always open to new opportunities, collaborations, or just a friendly chat.
+          Feel free to reach out through any of the channels below.
+        </p>
+      </div>
 
-      <div className="container contact_container">
-        {/* Contact Info Cards */}
+      <div className="container contact_container fade-up">
         <div className="contact_options">
           <article className="contact_option">
             <FaEnvelope className="contact_icon" />
@@ -38,12 +39,11 @@ const Contact = () => {
           </article>
         </div>
 
-        {/* Contact Form */}
         <form className="contact_form">
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />
           <textarea rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit" className="btn">Send Message</button>
+          <button type="submit" className="btn contact_btn">Send Message</button>
         </form>
       </div>
     </section>

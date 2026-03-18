@@ -1,31 +1,31 @@
 nav {
   width: 100vw;
-  height: 5rem;
+  height: 6rem; 
   display: flex;
   align-items: center;
-  background: var(--color-primary);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
-  box-shadow: 0 1rem 1.5rem hsla(var(--primary-hue), 68%, 42%, 20%);
+  z-index: 99;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: var(--transition);
 }
 
 .nav_container {
-  width: 90%;
+  width: var(--container-width-lg);
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
 }
 
 .nav_logo {
-  position: absolute;
-  left: 0;
   display: flex;
   align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
 }
 
 .nav_logo img {
@@ -35,25 +35,50 @@ nav {
   object-fit: cover;
 }
 
+.logo_text {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+}
+
 .nav_menu {
   display: flex;
-  gap: 3.5rem;
+  gap: 3rem;
   list-style: none;
 }
 
 .nav_menu a {
-  color: var(--color-white);
-  font-weight: 500;
+  color: #444; 
+  font-weight: 600;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .nav_menu a:hover {
-  opacity: 0.8;
+  color: var(--color-primary); 
+}
+
+.nav_cta .nav_btn {
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: #6a4c93;
+  color: #ffffff;
+  border: 2px solid #6a4c93;
+  text-decoration: none;
+}
+
+.nav_cta .nav_btn:hover {
+  background: transparent;
+  color: #6a4c93;
 }
 
 @media screen and (max-width: 1024px) {
-  .nav_menu {
+  .nav_menu, .nav_cta {
     display: none;
   }
 }
