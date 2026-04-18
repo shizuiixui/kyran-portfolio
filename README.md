@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website, where I showcase my projects, skills, and experience as an aspiring mobile developer. This site highlights the applications I’ve worked on and the technologies I’m currently learning and exploring.
 
 ## Live Demo
-🔗 [View Portfolio Here](https://shizuiixui.github.io/kyran-portfolio/)
+🔗 [View Portfolio Here](https://kyran-dev.vercel.app/)
 
 ## Built With
 - React.js
