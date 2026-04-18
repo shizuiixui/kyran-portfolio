@@ -13,7 +13,7 @@ const Portfolio = () => {
       </div>
 
       <div className="container projects_container portrait">
-        {data.slice(0, 3).map((item) => (
+        {data.slice(0, 4).map((item) => (
           <Cards key={item.id} className="project_card fade-up">
             <div className="project_image">
               <img src={item.image} alt={item.title} />
@@ -31,7 +31,7 @@ const Portfolio = () => {
       </div>
 
       <div className="container projects_container landscape">
-        {data.slice(3, 4).map((item) => (
+        {data.slice(4, 5).map((item) => (
           <Cards key={item.id} className="project_card landscape_card fade-up">
             <div className="landscape_content">
               <div className="project_image landscape_image">
