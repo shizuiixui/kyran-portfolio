@@ -2,7 +2,7 @@ import FCMS from "../../assets/FCMS.jpg";
 import FixIT from "../../assets/FixIT.jpg";
 import LCSG from "../../assets/LCSG.png";
 import AuriSign from "../../assets/AuriSign.jpg";
-import BytesandBites from "../../assets/bytes_bites.png";
+import BytesandBites from "../../assets/bytes_bites.jpg";
 
 const data = [
   {
