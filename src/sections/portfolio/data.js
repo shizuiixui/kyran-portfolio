@@ -11,7 +11,7 @@ const data = [
     title: "AuriSign",
     description: "A gamified sign language learning platform that fosters inclusive communication through interactive lessons, daily streak tracking, and a rewarding achievement system.",
     role: "Mobile Developer & UI/UX Designer",
-    date: "March 2026",
+    date: "December 2025 - March 2026",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const data = [
     title: "Bytes & Bites",
     description: "An offline-first personal finance and inventory ecosystem that simplifies resource management through real-time expense tracking, automated subscription alerts, and a reactive stock monitoring system.",
     role: "Mobile Developer & UI/UX Designer",
-    date: "April 2026",
+    date: "March 2026 - April 2026",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const data = [
     title: "FixIt – PHINMA-Upang Campus Maintenance System",
     description: "A web and mobile platform for reporting and tracking campus maintenance issues with real-time updates and admin dashboards.",
     role: "Mobile Developer & UI/UX Designer",
-    date: "August 2025",
+    date: "July 2025 - November 2025",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const data = [
     title: "Fitness Club Management System",
     description: "A smart management system for gyms featuring dashboards, trainer scheduling, QR check-ins, and inventory tracking.",
     role: "Mobile UI/UX Designer",
-    date: "March 2025",
+    date: "December 2024 - March 2025",
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const data = [
     title: "Luca’s Sanctuary & Cawa’s Gang Pet Adoption System",
     description: "A pet adoption system with ML-powered pet recommendations and profile matching quiz.",
     role: "Project Manager & Frontend Developer",
-    date: "October 2025",
+    date: "October 2025 - November 2025",
   },
 ];
 
