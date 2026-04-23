@@ -9,7 +9,7 @@ const Header = () => {
         <div className="header_left fade-up">
           <h4 className="greeting">Welcome to my Portfolio</h4>
           <h1 className="name">I Am <span className="highlight">Kyran Gabriel</span></h1>
-          <h3 className="role">Student & Aspiring Mobile Developer</h3>
+          <h3 className="role">Aspiring UI/UX Designer & Mobile Developer</h3>
           <p>
             Hello! I am a passionate 3rd-year Information Technology student at PHINMA-University of Pangasinan. Explore my portfolio and discover how I create meaningful digital experiences.
           </p>
