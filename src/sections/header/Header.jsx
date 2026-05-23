@@ -11,7 +11,7 @@ const Header = () => {
           <h1 className="name">I Am <span className="highlight">Kyran Gabriel</span></h1>
           <h3 className="role">Aspiring UI/UX Designer & Mobile Developer</h3>
           <p>
-            Hello! I am a passionate 3rd-year Information Technology student at PHINMA-University of Pangasinan. Explore my portfolio and discover how I create meaningful digital experiences.
+            Hello! I am a passionate 4th-year Information Technology student at PHINMA-University of Pangasinan. Explore my portfolio and discover how I create meaningful digital experiences.
           </p>
           
           <div className="header_cta">

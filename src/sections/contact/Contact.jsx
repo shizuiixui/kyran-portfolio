@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="contact_header fade-up">
         <h2>Contact Me</h2>
         <p>
-          I’m always open to new opportunities, collaborations, or just a friendly chat.
+          I’m always open to new opportunities, or collaborations.
           Feel free to reach out through any of the channels below.
         </p>
       </div>

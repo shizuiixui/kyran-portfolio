@@ -16,7 +16,7 @@ const About = () => {
           <h2>About Me</h2>
           <p>
             I’m Kyran Gabriel E. Josafat from Bocacliw, Aguilar, Pangasinan. 
-            I’m currently a third-year Information Technology student at PHINMA–University of Pangasinan. 
+            I’m currently a fourth-year Information Technology student at PHINMA–University of Pangasinan. 
             I have a growing interest in mobile development and UI/UX design, 
             and I aim to apply my developing skills to solve real-world problems. 
             I’m always eager to learn new technologies and continuously improve through practice and collaboration.
