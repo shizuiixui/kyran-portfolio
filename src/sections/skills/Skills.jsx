@@ -1,6 +1,5 @@
 import './skills.css'
 import data from './data'
-import Cards from "../../components/Cards"
 
 const Skills = () => {
   return (
@@ -8,20 +7,29 @@ const Skills = () => {
       <div className="skills_header fade-up">
         <h2>My Skills</h2>
         <p>
-          These are the skills I’ve learned and continuously
+          These are the technologies and tools I continuously use and 
           improve as I grow in the field of development and design.
         </p>
       </div>
 
       <div className="container skills_container">
         {data.map(item => (
-          <Cards key={item.id} className="skill_card fade-up">
-            <div className="skill_icon">{item.icon}</div>
-            <div className="skill_details">
-              <h4>{item.skill}</h4>
-              <p>{item.description}</p>
+          <div key={item.id} className="fade-up" style={{ height: '100%' }}>
+            <div className="skill_card">
+              <h3 className="skill_category">{item.category}</h3>
+              
+              <div className="skill_pills">
+                {item.skills.map((skill, index) => (
+                  <span key={index} className="skill_pill">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <p className="skill_description">{item.description}</p>
             </div>
-          </Cards>
+            
+          </div>
         ))}
       </div>
     </section>
