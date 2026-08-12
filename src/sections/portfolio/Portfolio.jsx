@@ -25,6 +25,14 @@ const Portfolio = () => {
                 <p><strong>Role:</strong> {item.role}</p>
                 <p><strong>Date:</strong> {item.date}</p>
               </div>
+              
+              {item.apkLink && (
+                <div className="project_links">
+                  <a href={item.apkLink} download className="btn primary">
+                    Download APK
+                  </a>
+                </div>
+              )}
             </div>
           </Cards>
         ))}
@@ -44,6 +52,13 @@ const Portfolio = () => {
                   <p><strong>Role:</strong> {item.role}</p>
                   <p><strong>Date:</strong> {item.date}</p>
                 </div>
+                {item.apkLink && (
+                  <div className="project_links">
+                    <a href={item.apkLink} download className="btn primary">
+                      Download APK
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </Cards>

@@ -34,6 +34,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  align-items: start;
 }
 
 .project_card {
@@ -95,7 +96,6 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex: 1;
 }
 
 .project_meta {
@@ -104,6 +104,10 @@
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #eee;
+}
+
+.project_meta:last-child {
+  margin-bottom: 0;
 }
 
 .project_meta p {
@@ -122,9 +126,23 @@
 
 .project_links {
   margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .btn.primary {
+  display: inline-block;
+  background: #6a4c93;
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.project_links .btn.primary {
   display: inline-block;
   background: #6a4c93;
   color: #ffffff;
