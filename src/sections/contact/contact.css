@@ -39,6 +39,7 @@
 
 .contact_option:hover {
   transform: translateY(-5px);
+  border: 1px solid #6a4c93;
 }
 
 .contact_icon {

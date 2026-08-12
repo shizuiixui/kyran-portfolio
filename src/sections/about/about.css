@@ -85,7 +85,7 @@
 .about_card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(106, 76, 147, 0.15);
-  border-color: #6a4c93;
+  border-color: #6a4c93 !important;
 }
 
 .about_card-icon {
