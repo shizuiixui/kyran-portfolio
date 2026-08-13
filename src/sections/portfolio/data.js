@@ -20,7 +20,7 @@ const data = [
     description: "An offline-first personal finance and inventory ecosystem that simplifies resource management through real-time expense tracking, automated subscription alerts, and a reactive stock monitoring system.",
     role: "Mobile Developer & UI/UX Designer",
     date: "March 2026 - April 2026",
-    apkLink: "public/downloads/Bytes&Bites.apk",
+    apkLink: "/downloads/BytesAndBites.apk",
   },
   {
     id: 3,
