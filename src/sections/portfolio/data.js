@@ -21,7 +21,7 @@ const data = [
     description: "An AI-powered medication management companion that simplifies daily health routines through automated dose reminders, a digital prescription inventory, and smart camera-based schedule logging.",
     role: "Mobile & Backend Developer | AI Integration",
     date: "May 2026 - August 2026",
-    apkLink: "YOUR_GITHUB_RELEASE_URL_HERE", // Replace later
+    apkLink: "https://drive.google.com/uc?export=download&id=1uRY23Y2InA1cg5K-_2iXaA8kwrUOMMh0",
   },
   {
     id: 3,
