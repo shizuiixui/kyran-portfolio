@@ -3,6 +3,7 @@ import FixIT from "../../assets/FixIT.jpg";
 import LCSG from "../../assets/LCSG.png";
 import AuriSign from "../../assets/AuriSign.jpg";
 import BytesandBites from "../../assets/bytes_bites.jpg";
+import NudgeRX from "../../assets/NudgeRX.jpg";
 
 const data = [
   {
@@ -15,6 +16,15 @@ const data = [
   },
   {
     id: 2,
+    image: NudgeRX,
+    title: "NudgeRX",
+    description: "An AI-powered medication management companion that simplifies daily health routines through automated dose reminders, a digital prescription inventory, and smart camera-based schedule logging.",
+    role: "Mobile & Backend Developer | AI Integration",
+    date: "May 2026 - August 2026",
+    apkLink: "YOUR_GITHUB_RELEASE_URL_HERE", // Replace later
+  },
+  {
+    id: 3,
     image: BytesandBites,
     title: "Bytes & Bites",
     description: "An offline-first personal finance and inventory ecosystem that simplifies resource management through real-time expense tracking, automated subscription alerts, and a reactive stock monitoring system.",
@@ -23,7 +33,7 @@ const data = [
     apkLink: "/downloads/BytesAndBites.apk",
   },
   {
-    id: 3,
+    id: 4,
     image: FixIT,
     title: "FixIt – PHINMA-Upang Campus Maintenance System",
     description: "A web and mobile platform for reporting and tracking campus maintenance issues with real-time updates and admin dashboards.",
@@ -31,7 +41,7 @@ const data = [
     date: "July 2025 - November 2025",
   },
   {
-    id: 4,
+    id: 5,
     image: FCMS,
     title: "Fitness Club Management System",
     description: "A smart management system for gyms featuring dashboards, trainer scheduling, QR check-ins, and inventory tracking.",
@@ -39,7 +49,7 @@ const data = [
     date: "December 2024 - March 2025",
   },
   {
-    id: 5,
+    id: 6,
     image: LCSG,
     title: "Luca’s Sanctuary & Cawa’s Gang Pet Adoption System",
     description: "A pet adoption system with ML-powered pet recommendations and profile matching quiz.",
