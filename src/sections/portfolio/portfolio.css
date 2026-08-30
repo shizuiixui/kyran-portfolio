@@ -1,6 +1,6 @@
 #portfolio {
   padding: 6rem 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .portfolio_header {
@@ -11,15 +11,16 @@
 
 .portfolio_header h2 {
   font-size: 2.5rem;
-  color: #1a1a2e;
+  color: var(--text-title);
   margin-bottom: 1rem;
   font-weight: 800;
+  transition: var(--transition);
 }
 
 .portfolio_header p {
   max-width: 600px;
   margin: 0 auto;
-  color: #666;
+  color: var(--text-body);
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -38,31 +39,32 @@
 }
 
 .project_card {
-  background: #fcfcfc;
+  background: var(--bg-card);
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
   transition: all 0.3s ease;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
 }
 
 .project_card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(106, 76, 147, 0.15);
-  border-color: #6a4c93;
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-primary);
 }
 
 .project_image {
   border-radius: 0.8rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
-  background: #f8f9fa;
+  background: var(--bg-card-inner);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
+  transition: var(--transition);
 }
 
 .project_image img {
@@ -86,13 +88,14 @@
 
 .project_details h3 {
   font-size: 1.3rem;
-  color: #1a1a2e;
+  color: var(--text-title);
   margin-bottom: 0.8rem;
   font-weight: 700;
+  transition: var(--transition);
 }
 
 .project_description {
-  color: #666;
+  color: var(--text-body);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -100,10 +103,11 @@
 
 .project_meta {
   margin-bottom: 1.5rem;
-  background: #ffffff;
+  background: var(--bg-card-inner);
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-subtle);
+  transition: var(--transition);
 }
 
 .project_meta:last-child {
@@ -112,7 +116,7 @@
 
 .project_meta p {
   font-size: 0.85rem;
-  color: #4a4a68;
+  color: var(--text-muted);
   margin-bottom: 0.3rem;
 }
 
@@ -121,7 +125,7 @@
 }
 
 .project_meta strong {
-  color: #1a1a2e;
+  color: var(--text-title);
 }
 
 .project_links {
@@ -131,7 +135,7 @@
 
 .btn.primary {
   display: inline-block;
-  background: #6a4c93;
+  background: var(--color-primary);
   color: #ffffff;
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
@@ -144,7 +148,7 @@
 
 .project_links .btn.primary {
   display: inline-block;
-  background: #6a4c93;
+  background: var(--color-primary);
   color: #ffffff;
   padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
@@ -156,7 +160,7 @@
 }
 
 .btn.primary:hover {
-  background: #553a7a;
+  background: var(--color-primary-hover);
 }
 
 .landscape_content {

@@ -4,14 +4,15 @@
 }
 
 .contact_header h2 {
-  color: #1a1a2e;
+  color: var(--text-title);
   margin-bottom: 0.5rem;
+  transition: var(--transition);
 }
 
 .contact_header p {
   max-width: 40rem;
   margin: 0 auto;
-  color: #666;
+  color: var(--text-body);
   line-height: 1.6;
 }
 
@@ -29,32 +30,35 @@
 }
 
 .contact_option {
-  background: #ffffff;
+  background: var(--bg-card);
   padding: 1.5rem;
   border-radius: 0.8rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-subtle);
 }
 
 .contact_option:hover {
   transform: translateY(-5px);
-  border: 1px solid #6a4c93;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .contact_icon {
   font-size: 1.8rem;
-  color: #6a4c93;
+  color: var(--color-primary);
   margin-bottom: 0.8rem;
 }
 
 .contact_option h4 {
   margin-bottom: 0.5rem;
-  color: #1a1a2e;
+  color: var(--text-title);
+  transition: var(--transition);
 }
 
 .contact_option a {
-  color: #6a4c93;
+  color: var(--color-primary);
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -75,17 +79,25 @@
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #ddd;
-  background: #f8f9fa;
+  border: 1px solid var(--border-input);
+  background: var(--bg-input);
+  color: var(--text-title);
   font-size: 0.95rem;
   resize: none;
   font-family: inherit;
+  transition: var(--transition);
+}
+
+.contact_form input::placeholder,
+.contact_form textarea::placeholder {
+  color: var(--text-muted);
 }
 
 .contact_form input:focus,
 .contact_form textarea:focus {
   outline: none;
-  border-color: #6a4c93;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
 }
 
 /* Button Styles*/
@@ -102,14 +114,14 @@
   font-family: inherit;
   font-size: 1rem;
   cursor: pointer;
-  background: #6a4c93;
+  background: var(--color-primary);
   color: #ffffff;
-  border: 2px solid #6a4c93;
+  border: 2px solid var(--color-primary);
 }
 
 .contact_form .contact_btn:hover {
   background: transparent;
-  color: #6a4c93;
+  color: var(--color-primary);
 }
 
 @media screen and (max-width: 768px) {

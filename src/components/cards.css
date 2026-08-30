@@ -1,24 +1,26 @@
 .card {
-    background: var(--color-white);
+    background: var(--bg-card);
     padding: 1.5rem;
-    border: 2px solid transparent;
+    border: 2px solid var(--border-subtle);
     border-radius: var(--border-radius-1);
+    box-shadow: var(--shadow-card);
     transition: var(--transition);
 }
 
 .card:hover {
-    background: transparent;
-    border-color: var(--color-white);
+    background: var(--bg-card-hover);
+    border-color: var(--color-primary);
     transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-card-hover);
 }
 
 .card.light {
-    background: var(--color-light);
+    background: var(--bg-card-inner);
 }
 
 .card.light:hover {
-    background: transparent;
-    border-color: var(--color-light);
+    background: var(--bg-card);
+    border-color: var(--color-primary);
 }
 
 /* MEDIA QUERIES */

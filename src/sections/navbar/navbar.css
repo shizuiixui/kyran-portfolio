@@ -3,13 +3,13 @@ nav {
   height: 6rem; 
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
+  background: var(--bg-nav);
+  backdrop-filter: blur(12px);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-nav);
   transition: var(--transition);
 }
 
@@ -38,8 +38,9 @@ nav {
 .logo_text {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #1a1a2e;
+  color: var(--text-title);
   letter-spacing: -0.5px;
+  transition: var(--transition);
 }
 
 .nav_menu {
@@ -49,7 +50,7 @@ nav {
 }
 
 .nav_menu a {
-  color: #444; 
+  color: var(--text-muted); 
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
@@ -60,21 +61,67 @@ nav {
   color: var(--color-primary); 
 }
 
+.nav_actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.theme_toggle_btn {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  background: var(--theme-toggle-bg);
+  border: 1px solid var(--theme-toggle-border);
+  color: var(--theme-toggle-color);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme_toggle_btn:hover {
+  transform: translateY(-2px) rotate(15deg);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px var(--color-primary-glow);
+}
+
+.theme_toggle_btn:active {
+  transform: scale(0.95);
+}
+
+.theme_icon {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.theme_icon.sun {
+  color: #ffd166;
+}
+
+.theme_icon.moon {
+  color: var(--color-primary);
+}
+
 .nav_cta .nav_btn {
   padding: 0.8rem 2rem;
   border-radius: 0.5rem;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
-  background: #6a4c93;
+  background: var(--color-primary);
   color: #ffffff;
-  border: 2px solid #6a4c93;
+  border: 2px solid var(--color-primary);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav_cta .nav_btn:hover {
   background: transparent;
-  color: #6a4c93;
+  color: var(--color-primary);
 }
 
 @media screen and (max-width: 1024px) {

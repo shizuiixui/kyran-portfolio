@@ -1,6 +1,6 @@
 #skills {
   padding: 6rem 0;
-  background: #ffffff;
+  background: transparent;
 }
 
 .skills_header {
@@ -11,15 +11,16 @@
 
 .skills_header h2 {
   font-size: 2.5rem;
-  color: #1a1a2e;
+  color: var(--text-title);
   margin-bottom: 1rem;
   font-weight: 800;
+  transition: var(--transition);
 }
 
 .skills_header p {
   max-width: 600px;
   margin: 0 auto;
-  color: #666;
+  color: var(--text-body);
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -36,27 +37,28 @@
 #skills .skill_card {
   display: flex;
   flex-direction: column;
-  background: #fcfcfc; 
+  background: var(--bg-card); 
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-card);
   transition: all 0.3s ease;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-subtle);
   height: 100%; 
 }
 
 #skills .skill_card:hover {
   transform: translateY(-10px); 
-  box-shadow: 0 15px 30px rgba(106, 76, 147, 0.15); 
-  border-color: #6a4c93;
+  box-shadow: var(--shadow-card-hover); 
+  border-color: var(--color-primary);
 }
 
 .skill_category {
-  color: #1a1a2e;
+  color: var(--text-title);
   font-size: 1.35rem;
   margin-bottom: 1.5rem;
   font-weight: 800;
   white-space: nowrap;
+  transition: var(--transition);
 }
 
 .skill_pills {
@@ -67,24 +69,24 @@
 }
 
 .skill_pill {
-  background: rgba(106, 76, 147, 0.05);
-  color: #6a4c93;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
   padding: 0.4rem 1.2rem;
   border-radius: 2rem;
   font-size: 0.95rem;
   font-weight: 600;
-  border: 1px solid rgba(106, 76, 147, 0.3);
+  border: 1px solid var(--color-primary-border);
   transition: all 0.3s ease;
 }
 
 #skills .skill_card:hover .skill_pill {
-  background: #6a4c93;
+  background: var(--color-primary);
   color: #ffffff;
-  border-color: #6a4c93;
+  border-color: var(--color-primary);
 }
 
 .skill_description {
-  color: #666;
+  color: var(--text-body);
   font-size: 0.95rem;
   line-height: 1.6;
 }

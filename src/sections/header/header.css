@@ -3,7 +3,7 @@ header {
   min-height: calc(100vh - 5rem);
   display: flex;
   align-items: center;
-  background: #fcfcfc;
+  background: transparent;
   padding: 2rem 0;
   overflow: hidden;
 }
@@ -30,7 +30,7 @@ header {
 
 .greeting {
   font-weight: 600;
-  color: #333;
+  color: var(--text-muted);
   margin-bottom: 0.5rem;
 }
 
@@ -38,25 +38,27 @@ header {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
-  color: #1a1a2e; 
+  color: var(--text-title); 
   margin-bottom: 0.5rem;
+  transition: var(--transition);
 }
 
 .name .highlight {
-  color: #6a4c93; 
+  color: var(--color-primary); 
+  transition: var(--transition);
 }
 
 .role {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #4a4a68;
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
 .header_left p {
   width: 100%;
   max-width: 35rem;
-  color: #666;
+  color: var(--text-body);
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
@@ -74,24 +76,6 @@ header {
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-
-.btn.dark {
-  background: #1a1a2e;
-  color: white;
-}
-
-.btn.dark:hover {
-  background: #33334d;
-}
-
-.btn.primary {
-  background: #6a4c93;
-  color: white;
-}
-
-.btn.primary:hover {
-  background: #553a7a;
 }
 
 /* --- RIGHT SIDE: IMAGE --- */
@@ -115,9 +99,11 @@ header {
   right: -20px;
   width: 100%;
   height: 100%;
-  background: #1a1a2e;
+  background: var(--bg-image-backdrop);
   border-radius: 8px;
   z-index: 1;
+  transition: var(--transition);
+  box-shadow: var(--shadow-portrait);
 }
 
 .profile_img {
@@ -182,23 +168,23 @@ header {
 }
 
 .header_cta .btn.dark {
-  background: #1a1a2e;
-  color: #ffffff;
-  border: 2px solid #1a1a2e;
+  background: var(--btn-dark-bg);
+  color: var(--btn-dark-text);
+  border: 2px solid var(--btn-dark-border);
 }
 
 .header_cta .btn.dark:hover {
-  background: transparent;
-  color: #1a1a2e;
+  background: var(--btn-dark-hover-bg);
+  color: var(--btn-dark-hover-text);
 }
 
 .header_cta .btn.primary {
-  background: #6a4c93;
+  background: var(--color-primary);
   color: #ffffff;
-  border: 2px solid #6a4c93;
+  border: 2px solid var(--color-primary);
 }
 
 .header_cta .btn.primary:hover {
   background: transparent;
-  color: #6a4c93;
+  color: var(--color-primary);
 }
