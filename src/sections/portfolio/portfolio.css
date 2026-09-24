@@ -67,6 +67,55 @@
   align-items: center;
   padding: 1.5rem;
   transition: var(--transition);
+  position: relative;
+  cursor: pointer;
+}
+
+.project_image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(106, 76, 147, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  opacity: 0;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.project_image:hover .project_image_overlay {
+  opacity: 1;
+}
+
+.overlay_icon {
+  font-size: 2rem;
+  transform: scale(0.75);
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.project_image:hover .overlay_icon {
+  transform: scale(1);
+}
+
+.overlay_text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .project_image img {
@@ -79,7 +128,7 @@
 }
 
 .project_card:hover .project_image img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .project_details {
@@ -233,4 +282,154 @@
 .fade-up {
   opacity: 0;
   animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* --- LIGHTBOX MODAL --- */
+.lightbox_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+  animation: modalFadeIn 0.25s ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox_card {
+  background: var(--bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 35px var(--color-primary-glow),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.lightbox_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.8rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lightbox_header h3 {
+  font-size: 1.35rem;
+  color: var(--text-title);
+  margin-bottom: 0.2rem;
+}
+
+.lightbox_subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.lightbox_close_btn {
+  background: var(--theme-toggle-bg);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-title);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lightbox_close_btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  transform: rotate(90deg) scale(1.05);
+}
+
+.lightbox_image_container {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card-inner);
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.lightbox_image_container img {
+  max-width: 100%;
+  max-height: 55vh;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox_footer {
+  padding: 1.2rem 1.8rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lightbox_footer .project_pills {
+  margin-bottom: 0;
+}
+
+.lightbox_footer .btn {
+  width: auto;
+  padding: 0.6rem 1.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .lightbox_backdrop {
+    padding: 0.8rem;
+  }
+  
+  .lightbox_header, .lightbox_footer {
+    padding: 1rem 1.2rem;
+  }
+  
+  .lightbox_image_container {
+    padding: 1rem;
+    max-height: 50vh;
+  }
+
+  .lightbox_image_container img {
+    max-height: 45vh;
+  }
 }
