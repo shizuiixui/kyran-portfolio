@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./navbar.css";
 import data from "./data";
 import Logo from "../../assets/Logo.png";
+import LogoDark from "../../assets/Logo_dark.png";
 import { useTheme } from "../../context/ThemeContext";
 import { 
   IoSunny, 
@@ -108,7 +109,7 @@ const Navbar = () => {
       <div className="container nav_container">
         
         <a href="index.html" className="nav_logo" onClick={() => setIsMobileMenuOpen(false)}>
-          <img src={Logo} alt="Logo" />
+          <img src={isDarkMode ? LogoDark : Logo} alt="Logo" className="nav_logo_img" />
           <span className="logo_text">Kyran</span>
         </a>
         
