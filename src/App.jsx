@@ -6,6 +6,7 @@ import Portfolio from './sections/portfolio/Portfolio';
 import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
 import Skills from './sections/skills/Skills';
+import ScrollToTop from './components/ScrollToTop';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -28,6 +29,7 @@ const App = () => {
       <Portfolio />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 };

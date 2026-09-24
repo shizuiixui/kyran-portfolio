@@ -1,0 +1,91 @@
+.scroll_to_top {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  z-index: 90;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.85);
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.35s,
+              background 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease,
+              color 0.35s ease;
+}
+
+[data-theme="dark"] .scroll_to_top {
+  background: rgba(22, 22, 36, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffd166;
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.scroll_to_top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll_to_top:hover {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 
+    0 16px 36px -4px var(--color-primary-glow),
+    0 0 20px -2px var(--color-primary-glow),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+[data-theme="dark"] .scroll_to_top:hover {
+  background: rgba(30, 30, 48, 0.8);
+  color: #ffd166;
+  border-color: var(--color-primary);
+  box-shadow: 
+    0 16px 36px -4px var(--color-primary-glow),
+    0 0 20px -2px var(--color-primary-glow),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.scroll_to_top:active {
+  transform: translateY(-2px) scale(0.95);
+}
+
+.scroll_to_top_icon {
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.scroll_to_top:hover .scroll_to_top_icon {
+  transform: translateY(-3px);
+}
+
+@media screen and (max-width: 768px) {
+  .scroll_to_top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    font-size: 1.05rem;
+  }
+}
