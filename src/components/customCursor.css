@@ -1,0 +1,99 @@
+/* Hide default OS mouse pointer on fine-pointer desktop devices */
+@media (pointer: fine) {
+  html,
+  body,
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
+.custom_cursor_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99999;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.custom_cursor_container.hidden {
+  opacity: 0;
+}
+
+.custom_cursor_container.visible {
+  opacity: 1;
+}
+
+/* Precision Center Dot */
+.cursor_dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 8px var(--color-primary);
+  will-change: transform;
+  transition: transform 0.05s linear, opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+/* Fluid Trailing Outer Glow Ring */
+.cursor_ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  pointer-events: none;
+  will-change: transform;
+  transition: 
+    width 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+    height 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+    background 0.25s ease, 
+    border-color 0.25s ease, 
+    box-shadow 0.25s ease;
+}
+
+/* Hover State - expands and illuminates */
+.custom_cursor_container.hovered .cursor_ring {
+  width: 52px;
+  height: 52px;
+  background: rgba(106, 76, 147, 0.16);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+.custom_cursor_container.hovered .cursor_dot {
+  opacity: 0.6;
+  width: 5px;
+  height: 5px;
+}
+
+/* Click / Active State - snaps inwards */
+.custom_cursor_container.clicked .cursor_ring {
+  width: 24px;
+  height: 24px;
+  background: rgba(106, 76, 147, 0.3);
+  border-color: var(--color-primary);
+}
+
+.custom_cursor_container.clicked .cursor_dot {
+  transform: scale(1.3);
+}
+
+/* Automatically disable on mobile / touchscreens */
+@media (pointer: coarse), (hover: none) {
+  .custom_cursor_container {
+    display: none !important;
+  }
+}
