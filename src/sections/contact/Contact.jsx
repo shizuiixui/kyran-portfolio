@@ -4,7 +4,9 @@ import {
   IoPaperPlaneOutline, 
   IoCheckmarkCircle, 
   IoAlertCircle, 
-  IoInformationCircle 
+  IoInformationCircle,
+  IoCopyOutline,
+  IoCheckmarkDoneOutline
 } from "react-icons/io5";
 import "./contact.css";
 
@@ -12,8 +14,18 @@ const Contact = () => {
   const formRef = useRef();
   const [status, setStatus] = useState("idle"); // "idle" | "sending" | "success" | "error" | "unconfigured"
   const [errorMessage, setErrorMessage] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
+
+  const handleCopyEmail = (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText("kyjosafat02@gmail.com");
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 2500);
+  };
 
   const handleSendEmail = async (e) => {
     e.preventDefault();
@@ -71,12 +83,31 @@ const Contact = () => {
 
       <div className="container contact_container fade-up">
         <div className="contact_options">
-          <article className="contact_option">
+          {/* Email option with 1-Click Copy & Floating Tooltip */}
+          <article className="contact_option email_option">
             <FaEnvelope className="contact_icon" />
             <h4>Email</h4>
-            <a href="mailto:kyjosafat02@gmail.com" target="_blank" rel="noreferrer">
-              kyjosafat02@gmail.com
-            </a>
+            <button 
+              type="button"
+              className="copy_email_btn" 
+              onClick={handleCopyEmail}
+              title="Click to copy email address"
+              aria-label="Copy email address"
+            >
+              <span className="email_text">kyjosafat02@gmail.com</span>
+              {copied ? (
+                <IoCheckmarkDoneOutline className="copy_icon copied" />
+              ) : (
+                <IoCopyOutline className="copy_icon" />
+              )}
+            </button>
+
+            {/* Floating Tooltip Bubble */}
+            {copied && (
+              <div className="copy_tooltip" role="status">
+                ✓ Copied to clipboard!
+              </div>
+            )}
           </article>
 
           <article className="contact_option">
