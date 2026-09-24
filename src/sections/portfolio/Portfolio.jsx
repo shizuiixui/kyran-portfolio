@@ -36,9 +36,9 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="container projects_container portrait">
+      <div className="container projects_container portrait fade-up">
         {data.slice(0, 5).map((item) => (
-          <Cards key={item.id} className="project_card fade-up">
+          <Cards key={item.id} className="project_card">
             <div 
               className="project_image"
               onClick={() => setSelectedProject(item)}
@@ -79,9 +79,9 @@ const Portfolio = () => {
         ))}
       </div>
 
-      <div className="container projects_container landscape">
+      <div className="container projects_container landscape fade-up">
         {data.slice(5).map((item) => (
-          <Cards key={item.id} className="project_card landscape_card fade-up">
+          <Cards key={item.id} className="project_card landscape_card">
             <div className="landscape_content">
               <div 
                 className="project_image landscape_image"

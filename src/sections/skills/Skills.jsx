@@ -1,5 +1,6 @@
-import './skills.css'
-import data from './data'
+import './skills.css';
+import data from './data';
+import Cards from '../../components/Cards';
 
 const Skills = () => {
   return (
@@ -12,10 +13,10 @@ const Skills = () => {
         </p>
       </div>
 
-      <div className="container skills_container">
+      <div className="container skills_container fade-up">
         {data.map(item => (
-          <div key={item.id} className="skill_item_wrapper fade-up">
-            <div className="skill_card">
+          <div key={item.id} className="skill_item_wrapper">
+            <Cards className="skill_card">
               <h3 className="skill_category">{item.category}</h3>
               
               <div className="skill_pills">
@@ -27,12 +28,12 @@ const Skills = () => {
               </div>
 
               <p className="skill_description">{item.description}</p>
-            </div>
+            </Cards>
           </div>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

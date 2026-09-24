@@ -87,7 +87,6 @@
 }
 
 .about_card:hover {
-  transform: translateY(-8px);
   box-shadow: var(--shadow-card-hover);
   border-color: var(--color-primary) !important;
 }

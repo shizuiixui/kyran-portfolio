@@ -8,6 +8,7 @@ import {
   IoCopyOutline,
   IoCheckmarkDoneOutline
 } from "react-icons/io5";
+import Cards from "../../components/Cards";
 import "./contact.css";
 
 const Contact = () => {
@@ -84,7 +85,7 @@ const Contact = () => {
       <div className="container contact_container fade-up">
         <div className="contact_options">
           {/* Email option with 1-Click Copy & Floating Tooltip */}
-          <article className="contact_option email_option">
+          <Cards className="contact_option email_option">
             <FaEnvelope className="contact_icon" />
             <h4>Email</h4>
             <button 
@@ -108,31 +109,31 @@ const Contact = () => {
                 ✓ Copied to clipboard!
               </div>
             )}
-          </article>
+          </Cards>
 
-          <article className="contact_option">
+          <Cards className="contact_option">
             <FaLinkedin className="contact_icon" />
             <h4>LinkedIn</h4>
             <a href="https://www.linkedin.com/in/kyran-gabriel-josafat-37a1432a1/" target="_blank" rel="noreferrer">
               linkedin.com/in/kyran-josafat
             </a>
-          </article>
+          </Cards>
 
-          <article className="contact_option">
+          <Cards className="contact_option">
             <FaGithub className="contact_icon" />
             <h4>GitHub</h4>
             <a href="https://github.com/shizuiixui" target="_blank" rel="noreferrer">
               github.com/shizuiixui
             </a>
-          </article>
+          </Cards>
 
-          <article className="contact_option">
+          <Cards className="contact_option">
             <FaDribbble className="contact_icon" />
             <h4>Dribbble</h4>
             <a href="https://dribbble.com/shizuii" target="_blank" rel="noreferrer">
               dribbble.com/shizuii
             </a>
-          </article>
+          </Cards>
         </div>
 
         <form ref={formRef} onSubmit={handleSendEmail} className="contact_form">
