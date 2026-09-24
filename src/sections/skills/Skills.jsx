@@ -14,7 +14,7 @@ const Skills = () => {
 
       <div className="container skills_container">
         {data.map(item => (
-          <div key={item.id} className="fade-up" style={{ height: '100%' }}>
+          <div key={item.id} className="skill_item_wrapper fade-up">
             <div className="skill_card">
               <h3 className="skill_category">{item.category}</h3>
               
@@ -28,7 +28,6 @@ const Skills = () => {
 
               <p className="skill_description">{item.description}</p>
             </div>
-            
           </div>
         ))}
       </div>
