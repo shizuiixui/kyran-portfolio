@@ -40,17 +40,19 @@
 
 .project_card {
   background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: var(--shadow-card);
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
 }
 
 .project_card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-card-hover);
   border-color: var(--color-primary);
 }

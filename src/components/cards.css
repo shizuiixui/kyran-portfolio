@@ -1,16 +1,18 @@
 .card {
     background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 1.5rem;
-    border: 2px solid var(--border-subtle);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--border-radius-1);
     box-shadow: var(--shadow-card);
-    transition: var(--transition);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
     background: var(--bg-card-hover);
     border-color: var(--color-primary);
-    transform: translateY(-0.5rem);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-card-hover);
 }
 

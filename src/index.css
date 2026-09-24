@@ -13,32 +13,33 @@
   --color-primary: #6a4c93;
   --color-primary-hover: #553a7a;
   --color-primary-light: rgba(106, 76, 147, 0.08);
-  --color-primary-border: rgba(106, 76, 147, 0.3);
-  --color-primary-glow: rgba(106, 76, 147, 0.2);
+  --color-primary-border: rgba(106, 76, 147, 0.25);
+  --color-primary-glow: rgba(106, 76, 147, 0.22);
 
   /* Light Theme Variables */
   --bg-body: #ffffff;
   --bg-dot: #e2e2e2;
   --bg-header: #fcfcfc;
-  --bg-card: #fcfcfc;
-  --bg-card-inner: #ffffff;
-  --bg-card-hover: #ffffff;
-  --bg-input: #f8f9fa;
-  --bg-nav: rgba(255, 255, 255, 0.92);
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card-inner: rgba(248, 249, 250, 0.75);
+  --bg-card-hover: rgba(255, 255, 255, 0.95);
+  --bg-input: rgba(248, 249, 250, 0.85);
+  --bg-nav: rgba(255, 255, 255, 0.88);
   --bg-image-backdrop: #1a1a2e;
   
   --text-title: #1a1a2e;
   --text-body: #666666;
   --text-muted: #4a4a68;
   
-  --border-subtle: #eeeeee;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.8);
   --border-input: #dddddd;
   
-  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 5px 15px rgba(0, 0, 0, 0.05);
-  --shadow-card-hover: 0 15px 30px rgba(106, 76, 147, 0.15);
-  --shadow-portrait: 0 10px 30px rgba(0, 0, 0, 0.1);
-  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.04), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  --shadow-card-hover: 0 18px 40px -8px rgba(106, 76, 147, 0.22), 0 0 20px -3px rgba(106, 76, 147, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  --shadow-portrait: 0 12px 35px rgba(0, 0, 0, 0.1);
+  --shadow-nav: 0 4px 25px rgba(0, 0, 0, 0.04);
 
   --btn-dark-bg: #1a1a2e;
   --btn-dark-text: #ffffff;
@@ -46,7 +47,7 @@
   --btn-dark-hover-text: #1a1a2e;
   --btn-dark-border: #1a1a2e;
 
-  --theme-toggle-bg: #f0f0f4;
+  --theme-toggle-bg: rgba(240, 240, 244, 0.8);
   --theme-toggle-color: #6a4c93;
   --theme-toggle-border: #e2e2e8;
 
@@ -64,32 +65,33 @@
   --color-primary: #9d78cc;
   --color-primary-hover: #865ebd;
   --color-primary-light: rgba(157, 120, 204, 0.15);
-  --color-primary-border: rgba(157, 120, 204, 0.4);
-  --color-primary-glow: rgba(157, 120, 204, 0.3);
+  --color-primary-border: rgba(157, 120, 204, 0.35);
+  --color-primary-glow: rgba(157, 120, 204, 0.35);
 
   /* Dark Theme Variables */
   --bg-body: #0c0c14;
   --bg-dot: #25253a;
   --bg-header: #11111c;
-  --bg-card: #161624;
-  --bg-card-inner: #1c1c2e;
-  --bg-card-hover: #1b1b2d;
-  --bg-input: #1a1a2c;
-  --bg-nav: rgba(12, 12, 20, 0.92);
+  --bg-card: rgba(22, 22, 36, 0.7);
+  --bg-card-inner: rgba(28, 28, 46, 0.65);
+  --bg-card-hover: rgba(27, 27, 45, 0.85);
+  --bg-input: rgba(26, 26, 44, 0.75);
+  --bg-nav: rgba(12, 12, 20, 0.85);
   --bg-image-backdrop: #9d78cc;
 
   --text-title: #f3f3f7;
   --text-body: #a8a8c2;
   --text-muted: #8888aa;
 
-  --border-subtle: #27273d;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.08);
   --border-input: #33334e;
 
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-card: 0 5px 20px rgba(0, 0, 0, 0.25);
-  --shadow-card-hover: 0 15px 30px rgba(157, 120, 204, 0.25);
-  --shadow-portrait: 0 10px 30px rgba(0, 0, 0, 0.4);
-  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  --shadow-card-hover: 0 20px 45px -8px rgba(157, 120, 204, 0.3), 0 0 25px -2px rgba(157, 120, 204, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  --shadow-portrait: 0 12px 35px rgba(0, 0, 0, 0.45);
+  --shadow-nav: 0 4px 25px rgba(0, 0, 0, 0.4);
 
   --btn-dark-bg: #f3f3f7;
   --btn-dark-text: #0c0c14;
@@ -97,7 +99,7 @@
   --btn-dark-hover-text: #f3f3f7;
   --btn-dark-border: #f3f3f7;
 
-  --theme-toggle-bg: #1c1c2e;
+  --theme-toggle-bg: rgba(28, 28, 46, 0.8);
   --theme-toggle-color: #ffd166;
   --theme-toggle-border: #2e2e48;
 }
