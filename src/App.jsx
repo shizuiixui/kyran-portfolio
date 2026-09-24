@@ -11,6 +11,7 @@ import Skills from './sections/skills/Skills';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollProgress from './components/ScrollProgress';
 import CustomCursor from './components/CustomCursor';
+import Preloader from './components/Preloader';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -52,6 +53,7 @@ const App = () => {
 
   return (
     <main>
+      <Preloader />
       <CustomCursor />
       <ScrollProgress />
       <Navbar />
