@@ -39,6 +39,10 @@ const Header = () => {
       <div className="container header_container">
         
         <div className="header_left fade-up">
+          <div className="availability_badge">
+            <span className="pulsing_dot"></span>
+            <span>Available for work</span>
+          </div>
           <h4 className="greeting">Welcome to my Portfolio</h4>
           <h1 className="name">
             I am <span className="highlight">{text}</span>
