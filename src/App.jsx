@@ -7,6 +7,7 @@ import Contact from './sections/contact/Contact';
 import Footer from './sections/footer/Footer';
 import Skills from './sections/skills/Skills';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollProgress from './components/ScrollProgress';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -22,6 +23,7 @@ const App = () => {
 
   return (
     <main>
+      <ScrollProgress />
       <Navbar />
       <Header />
       <About />
