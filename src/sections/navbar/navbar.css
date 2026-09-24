@@ -45,7 +45,7 @@ nav {
 
 .nav_menu {
   display: flex;
-  gap: 3rem;
+  gap: 2.8rem;
   list-style: none;
 }
 
@@ -54,11 +54,40 @@ nav {
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.4rem 0;
+  display: inline-block;
+}
+
+.nav_menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px var(--color-primary-glow);
 }
 
 .nav_menu a:hover {
   color: var(--color-primary); 
+}
+
+.nav_menu a:hover::after {
+  width: 100%;
+}
+
+.nav_menu a.active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.nav_menu a.active::after {
+  width: 100%;
 }
 
 .nav_actions {

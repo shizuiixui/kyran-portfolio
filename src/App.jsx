@@ -23,10 +23,10 @@ const App = () => {
     <main>
       <Navbar />
       <Header />
-      <section data-aos="fade-up"><About /></section>
-      <section data-aos="fade-up" data-aos-delay="100"><Skills /></section>
-      <section data-aos="fade-up" data-aos-delay="200"><Portfolio /></section>
-      <section data-aos="fade-up" data-aos-delay="300"><Contact /></section>
+      <About />
+      <Skills />
+      <Portfolio />
+      <Contact />
       <Footer />
     </main>
   );
