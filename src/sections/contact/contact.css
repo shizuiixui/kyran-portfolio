@@ -80,11 +80,15 @@
   gap: 1.2rem;
 }
 
+.form_group {
+  width: 100%;
+}
+
 .contact_form input,
 .contact_form textarea {
   width: 100%;
-  padding: 0.9rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.6rem;
   border: 1px solid var(--border-input);
   background: var(--bg-input);
   color: var(--text-title);
@@ -106,14 +110,23 @@
   box-shadow: 0 0 0 3px var(--color-primary-light);
 }
 
-/* Button Styles*/
+.contact_form input:disabled,
+.contact_form textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Button Styles */
 .contact_form .contact_btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  border-radius: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 0.6rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
   width: 100%; 
   text-align: center;
@@ -123,11 +136,111 @@
   background: var(--color-primary);
   color: #ffffff;
   border: 2px solid var(--color-primary);
+  box-shadow: 0 4px 15px var(--color-primary-glow);
 }
 
-.contact_form .contact_btn:hover {
-  background: transparent;
-  color: var(--color-primary);
+.contact_form .contact_btn:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--color-primary-glow);
+}
+
+.contact_form .contact_btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.btn_icon {
+  font-size: 1.15rem;
+}
+
+/* Spinner */
+.spinner {
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Feedback Status Banners */
+.contact_status_banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.2rem;
+  border-radius: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  backdrop-filter: blur(10px);
+  animation: bannerFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes bannerFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.status_banner_icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.contact_status_banner strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.contact_status_banner p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.contact_status_banner code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.3rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.contact_status_banner.success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+}
+
+.contact_status_banner.success p {
+  color: #059669;
+}
+
+.contact_status_banner.error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.contact_status_banner.error p {
+  color: #dc2626;
+}
+
+.contact_status_banner.info {
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #3b82f6;
+}
+
+.contact_status_banner.info p {
+  color: var(--text-body);
 }
 
 @media screen and (max-width: 768px) {

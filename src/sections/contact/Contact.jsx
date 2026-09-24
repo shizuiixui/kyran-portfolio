@@ -1,7 +1,64 @@
+import { useRef, useState } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa";
+import { 
+  IoPaperPlaneOutline, 
+  IoCheckmarkCircle, 
+  IoAlertCircle, 
+  IoInformationCircle 
+} from "react-icons/io5";
 import "./contact.css";
 
 const Contact = () => {
+  const formRef = useRef();
+  const [status, setStatus] = useState("idle"); // "idle" | "sending" | "success" | "error" | "unconfigured"
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
+
+  const handleSendEmail = async (e) => {
+    e.preventDefault();
+
+    // Check if user has set their access key in .env
+    if (!accessKey) {
+      setStatus("unconfigured");
+      return;
+    }
+
+    setStatus("sending");
+    setErrorMessage("");
+
+    try {
+      const formData = new FormData(formRef.current);
+      formData.append("access_key", accessKey);
+      formData.append("from_name", "Portfolio Visitor");
+      formData.append("subject", "New Message from Portfolio");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus("success");
+        formRef.current.reset();
+
+        // Automatically reset status back to idle after 6 seconds
+        setTimeout(() => {
+          setStatus("idle");
+        }, 6000);
+      } else {
+        setStatus("error");
+        setErrorMessage(data.message || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Web3Forms submission error:", error);
+      setStatus("error");
+      setErrorMessage("Network error. Please email directly or try again later.");
+    }
+  };
+
   return (
     <section id="contact">
       <div className="contact_header fade-up">
@@ -47,11 +104,92 @@ const Contact = () => {
           </article>
         </div>
 
-        <form className="contact_form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit" className="btn contact_btn">Send Message</button>
+        <form ref={formRef} onSubmit={handleSendEmail} className="contact_form">
+          <div className="form_group">
+            <input 
+              type="text" 
+              name="name" 
+              placeholder="Your Name" 
+              required 
+              disabled={status === "sending"}
+            />
+          </div>
+
+          <div className="form_group">
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Your Email" 
+              required 
+              disabled={status === "sending"}
+            />
+          </div>
+
+          <div className="form_group">
+            <textarea 
+              name="message" 
+              rows="6" 
+              placeholder="Your Message" 
+              required
+              disabled={status === "sending"}
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            className={`btn contact_btn ${status === "sending" ? "loading" : ""}`}
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? (
+              <>
+                <span className="spinner"></span>
+                <span>Sending Message...</span>
+              </>
+            ) : status === "success" ? (
+              <>
+                <IoCheckmarkCircle className="btn_icon" />
+                <span>Message Sent!</span>
+              </>
+            ) : (
+              <>
+                <IoPaperPlaneOutline className="btn_icon" />
+                <span>Send Message</span>
+              </>
+            )}
+          </button>
+
+          {/* Feedback Status Banners */}
+          {status === "success" && (
+            <div className="contact_status_banner success" role="alert">
+              <IoCheckmarkCircle className="status_banner_icon" />
+              <div>
+                <strong>Message sent successfully!</strong>
+                <p>Thank you for reaching out. I’ll get back to you as soon as possible.</p>
+              </div>
+            </div>
+          )}
+
+          {status === "error" && (
+            <div className="contact_status_banner error" role="alert">
+              <IoAlertCircle className="status_banner_icon" />
+              <div>
+                <strong>Oops! Something went wrong.</strong>
+                <p>{errorMessage}</p>
+              </div>
+            </div>
+          )}
+
+          {status === "unconfigured" && (
+            <div className="contact_status_banner info" role="alert">
+              <IoInformationCircle className="status_banner_icon" />
+              <div>
+                <strong>Web3Forms Key Not Found</strong>
+                <p>
+                  Please ensure <code>REACT_APP_WEB3FORMS_ACCESS_KEY</code> is set in your <code>.env</code> file and restart the dev server.
+                </p>
+              </div>
+            </div>
+          )}
         </form>
       </div>
     </section>
