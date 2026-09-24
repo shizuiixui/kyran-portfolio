@@ -1,4 +1,4 @@
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa";
 import "./contact.css";
 
 const Contact = () => {
@@ -35,6 +35,14 @@ const Contact = () => {
             <h4>GitHub</h4>
             <a href="https://github.com/shizuiixui" target="_blank" rel="noreferrer">
               github.com/shizuiixui
+            </a>
+          </article>
+
+          <article className="contact_option">
+            <FaDribbble className="contact_icon" />
+            <h4>Dribbble</h4>
+            <a href="https://dribbble.com/shizuii" target="_blank" rel="noreferrer">
+              dribbble.com/shizuii
             </a>
           </article>
         </div>

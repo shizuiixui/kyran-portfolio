@@ -24,19 +24,24 @@
 }
 
 .contact_options {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
 }
 
 .contact_option {
   background: var(--bg-card);
-  padding: 1.5rem;
+  padding: 1.3rem 1rem;
   border-radius: 0.8rem;
   box-shadow: var(--shadow-card);
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-break: break-word;
 }
 
 .contact_option:hover {
@@ -128,6 +133,12 @@
   .contact_container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact_options {
+    grid-template-columns: 1fr;
   }
 }
 
