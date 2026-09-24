@@ -20,6 +20,15 @@ const Portfolio = () => {
             </div>
             <div className="project_details">
               <h3>{item.title}</h3>
+              {item.skills && (
+                <div className="project_pills">
+                  {item.skills.map((skill, index) => (
+                    <span key={index} className="project_pill">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
               <p className="project_description">{item.description}</p>
               <div className="project_meta">
                 <p><strong>Role:</strong> {item.role}</p>
@@ -47,6 +56,15 @@ const Portfolio = () => {
               </div>
               <div className="project_details">
                 <h3>{item.title}</h3>
+                {item.skills && (
+                  <div className="project_pills">
+                    {item.skills.map((skill, index) => (
+                      <span key={index} className="project_pill">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
                 <p className="project_description">{item.description}</p>
                 <div className="project_meta">
                   <p><strong>Role:</strong> {item.role}</p>
