@@ -102,6 +102,20 @@ const Navbar = () => {
   const handleNavLinkClick = (link) => {
     setActiveNav(link);
     setIsMobileMenuOpen(false);
+    if (link === "#contact") {
+      window.dispatchEvent(new CustomEvent("focus-contact-form"));
+    }
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    setActiveNav("#contact");
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    window.dispatchEvent(new CustomEvent("focus-contact-form"));
   };
 
   return (
@@ -122,7 +136,7 @@ const Navbar = () => {
                 <a 
                   href={item.link}
                   className={isActive ? "active" : ""}
-                  onClick={() => setActiveNav(item.link)}
+                  onClick={() => handleNavLinkClick(item.link)}
                 >
                   {item.title}
                 </a>
@@ -143,7 +157,7 @@ const Navbar = () => {
           </button>
 
           <div className="nav_cta">
-            <a href="#contact" className="btn nav_btn">Contact Me</a>
+            <a href="#contact" className="btn nav_btn" onClick={handleContactClick}>Contact Me</a>
           </div>
 
           {/* Mobile Hamburger Toggle Button */}
@@ -203,7 +217,7 @@ const Navbar = () => {
               <a 
                 href="#contact" 
                 className="btn mobile_cta_btn"
-                onClick={() => handleNavLinkClick("#contact")}
+                onClick={handleContactClick}
               >
                 Let's Talk
               </a>

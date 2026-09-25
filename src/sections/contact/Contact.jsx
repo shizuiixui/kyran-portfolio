@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FaEnvelope, FaLinkedin, FaGithub, FaDribbble } from "react-icons/fa";
 import { 
   IoPaperPlaneOutline, 
@@ -13,11 +13,31 @@ import "./contact.css";
 
 const Contact = () => {
   const formRef = useRef();
+  const nameInputRef = useRef();
   const [status, setStatus] = useState("idle"); // "idle" | "sending" | "success" | "error" | "unconfigured"
   const [errorMessage, setErrorMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
   const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
+
+  // Listen for Smart Auto-Focus trigger event (e.g. from "Hire Me" button)
+  useEffect(() => {
+    const handleAutoFocus = () => {
+      if (nameInputRef.current) {
+        // Wait for smooth scroll arrival before triggering focus & pulse
+        setTimeout(() => {
+          nameInputRef.current.focus();
+          nameInputRef.current.classList.add("input_pulse_highlight");
+          setTimeout(() => {
+            nameInputRef.current?.classList.remove("input_pulse_highlight");
+          }, 2200);
+        }, 650);
+      }
+    };
+
+    window.addEventListener("focus-contact-form", handleAutoFocus);
+    return () => window.removeEventListener("focus-contact-form", handleAutoFocus);
+  }, []);
 
   const handleCopyEmail = (e) => {
     e.preventDefault();
@@ -139,6 +159,8 @@ const Contact = () => {
         <form ref={formRef} onSubmit={handleSendEmail} className="contact_form">
           <div className="form_group">
             <input 
+              ref={nameInputRef}
+              id="contact-name-input"
               type="text" 
               name="name" 
               placeholder="Your Name" 

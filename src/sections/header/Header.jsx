@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Picture from '../../assets/picture.jpg'
-import "./header.css"
+import Picture from '../../assets/picture.jpg';
+import "./header.css";
 
 const Header = () => {
   const fullText = "Kyran Gabriel";
@@ -34,6 +34,15 @@ const Header = () => {
     return () => clearTimeout(timer);
   }, [text, isDeleting]);
 
+  const handleHireMeClick = (e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    window.dispatchEvent(new CustomEvent("focus-contact-form"));
+  };
+
   return (
     <header id="header">
       <div className="container header_container">
@@ -54,7 +63,7 @@ const Header = () => {
           </p>
           
           <div className="header_cta">
-            <a href="#contact" className='btn dark'>Hire Me</a>
+            <a href="#contact" className='btn dark' onClick={handleHireMeClick}>Hire Me</a>
             <a href="#portfolio" className='btn primary'>My Projects</a>
           </div>
         </div>
@@ -68,7 +77,7 @@ const Header = () => {
 
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
