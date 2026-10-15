@@ -69,7 +69,13 @@ const Portfolio = () => {
               
               {item.apkLink && (
                 <div className="project_links">
-                  <a href={item.apkLink} download className="btn primary">
+                  <a 
+                    href={item.apkLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    download 
+                    className="btn primary"
+                  >
                     Download APK
                   </a>
                 </div>
@@ -112,7 +118,13 @@ const Portfolio = () => {
                 </div>
                 {item.apkLink && (
                   <div className="project_links">
-                    <a href={item.apkLink} download className="btn primary">
+                    <a 
+                      href={item.apkLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      download 
+                      className="btn primary"
+                    >
                       Download APK
                     </a>
                   </div>
@@ -162,7 +174,13 @@ const Portfolio = () => {
                 </div>
               )}
               {selectedProject.apkLink && (
-                <a href={selectedProject.apkLink} download className="btn primary">
+                <a 
+                  href={selectedProject.apkLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  download 
+                  className="btn primary"
+                >
                   Download APK
                 </a>
               )}

@@ -14,6 +14,7 @@ const data = [
     description: "A gamified sign language learning platform that fosters inclusive communication through interactive lessons, daily streak tracking, and a rewarding achievement system.",
     role: "Mobile Developer & UI/UX Designer",
     date: "December 2025 - March 2026",
+    apkLink: "https://github.com/shizuiixui/auri_sign/releases/download/v1.0.0/AuriSign.apk",
   },
   {
     id: 2,
